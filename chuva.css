@@ -408,6 +408,8 @@ header {
     box-sizing: border-box;
     border-radius: 3px;
     height: fit-content;
+    padding-bottom: 15px;
+    min-width: fit-content;
 }
 
 .section-discussion {
@@ -561,7 +563,7 @@ header {
     margin-bottom: 3px;
 }
 
-.section-discussion-comments p {
+.section-discussion-comments p, .section-discussion-answers p {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
@@ -628,6 +630,173 @@ header {
     font-size: 14px;
     line-height: 19px;
     color: #757575;
+}
+
+.section-discussion-answers{
+    display: block;
+    margin-top: 0;
+    margin-left: 17px;
+    margin-right: 15px;
+    background: #F8F8F8;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 0px;
+    border-top: 0;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.12);
+}
+
+.section-discussion-answers > div > div > *{
+    display: inline-block;
+}
+
+.section-discussion-answers > div > div {
+    display: grid;
+    grid-template-columns: minmax(max-content, 538.6px) minmax(max-content, 390.8px) minmax(max-content,40.23px);
+    gap: 5px;
+    background-color: #F8F8F8;
+    text-align: right;
+    align-items: center;
+    height: min-content;
+}
+
+.section-discussion-answers-subcontainer > div > div p {
+    margin-bottom: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5C5C5C;
+}
+
+.section-discussion-answers-subcontainer {
+    margin-left: 17px;
+    margin-right: 17px;
+}
+
+.section-discussion-answers-subcontainer span {
+    display: block; 
+    text-align: start;
+    padding-bottom: 36px;
+}
+
+#nome_Adriano {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5C5C5C;
+}
+
+/* CRIAR TOPICO!!! */
+
+h4 {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #5C5C5C;
+    margin-bottom: 22px;
+}
+
+.section-criarTopico-form {
+    margin-left: 17.53px;
+    margin-right: 14.95px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.section-criarTopico-form form {
+    display: grid;
+}
+
+.section-criarTopico-form form label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ED7839;
+}
+
+.section-criarTopico-form form label input {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #4D4D4D;
+}
+
+.section-criarTopico-edit_submit {
+    display: flex;
+    height: 31px;
+    background: #EAF1F2;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 0px 0px 4px 4px;
+    border-top: 0px;
+}
+
+.section-criarTopico-edit_submit > div:first-of-type {
+    margin-left: 29.3px;
+    display: flex;
+    gap: 30.84px;
+    width: 100%;
+}
+
+.section-criarTopico-edit_submit img {
+    flex-grow: 0;
+    flex-basis: 0;
+    cursor: pointer;
+}
+
+.section-criarTopico-form form div > * {
+    display: inline-block;
+}
+
+/* ----------- */
+
+#criarTopicoAssunto, #criarTopicoConteudo  {
+    display: block;
+    padding: 0;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 3px; 
+    width: 100%;
+}
+
+#criarTopicoAssunto {
+    padding-top: 10px;
+    padding-bottom: 11px;
+    padding-left: 23.13px;
+}
+
+#criarTopicoConteudo {
+    height: 82px;
+}
+
+#criarTopicoEnviar {
+    background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+    border-radius: 0px 0px 4px 0px;
+    border: 0px;
+    height: 100%;
+}
+
+#criarTopicoEnviar input{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 7px 67.85px 8.5px 66.31px;
+    background-color: transparent; 
+    border: none;
 }
 
 footer {
