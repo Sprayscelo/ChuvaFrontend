@@ -12,10 +12,21 @@ function showMore() {
     Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. `
 }
 
+let enviarTopico = document.querySelector(".section-criarTopico-form")
+let topicoEnviado = document.querySelector(".section-discussion-topicoCriado")
+
 function criarTopicoLayout() {
+    if (topicoEnviado.style.display == `block`) {
+        topicoEnviado.style.display = `None`
+    }
     let discussion = document.querySelector(".section-discussion")
     for(i = 0; i<=3; i++) {
         discussion.children[i].style.display = 'None'
     }
     document.querySelector(".section-criarTopico-form").style.display = 'block'
+}
+
+function sendTopic() {
+    enviarTopico.style.display = 'None'
+    topicoEnviado.style.display = 'block'
 }

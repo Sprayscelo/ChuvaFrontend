@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="chuva.js"></script>
     <title>Document</title>
 </head>
 <link rel="stylesheet" href="chuva.css">
@@ -71,7 +70,9 @@
         <section class="section-container">
             <div class="section-leftSide">
                 <h2>Análise sensorial de preparações funcionais desenvolvidas para escolares entre 09 e 15 anos, do município de Campinas/SP </h2>
-                <iframe src="https://www.youtube.com/embed/1alpIMS86c4?autoplay=1&mute=1" frameborder="0"></iframe>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/pEn8dOtOLqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
             <div class="section-rightSide">
                 <div class="section-rightSide-btn-container">
@@ -162,9 +163,28 @@
                         </div>
                     </div>
                 </div>
+                <!-- ELEMENTO PARA MOSTRAR APÓS ENVIO DE FORMULARIO -->
+                <div style="display: none;" class="section-discussion-topicoCriado">
+                    <h4>Seu tópico foi enviado com sucesso! :D</h4>
+                    <span>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</span>
+                    <a href="">Descubra outros trabalhos!</a>
+                    <div class="section-discussion-topicoCriado-botao">
+                        <hr>
+                        <button onclick="criarTopicoLayout()">criar novo topico</button>
+                    </div>
+                    <div class="section-discussion-topicoCriado-feedback">
+                        <img src="Imagens/autorBlack.svg" alt="">
+                        <p>Aguardando feedback dos autores</p>
+                        <div>
+                            <a href="">Editar tópico</a>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- FORMULARIO PARA CRIAÇÃO DE NOVO TOPICO -->
                 <div style="display: none;" class="section-criarTopico-form">
                     <h4> Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores! </h4>
-                    <form action="" method="POST">
+                    <form action="">
                         <label style="margin-bottom: 10px;" for="">
                             Assunto <input id="criarTopicoAssunto" type="text" placeholder="Defina um tópico sucinto para notificar os autores...">
                         </label>
@@ -177,11 +197,12 @@
                                 <img src="Imagens/form/italico.svg" alt="">
                             </div>
                             <div id="criarTopicoEnviar">
-                                <input type="button" value="Enviar">
+                                <input type="button" onclick="sendTopic()" value="Enviar">
                             </div>
                         </div>
                     </form>
                 </div>
+                <!-- ------ -->
                 <div class="section-discussion-comments">
                     <p>Assunto da pergunta aparece aqui</p>
                     <span>Carlos Henrique Santos</span>
@@ -293,3 +314,4 @@
     </main>
 </body>
 </html>
+<script src="chuva.js"></script>

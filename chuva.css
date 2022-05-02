@@ -238,11 +238,11 @@ header {
 
 .section-container {
     display: flex;
+    justify-content: end;
     margin-top: 20px;
     margin-left: 43px;
     margin-right: 45px;
     margin-bottom: 15px;
-    height: fit-content;
 }
 
 .section-container h2 {
@@ -255,21 +255,28 @@ header {
     letter-spacing: 0.05em;
 }
 
-.section-container iframe {
+.iframe-container {
     display: block;
+    margin: 1em auto;
     width: 100%;
-    height: 86%;
-    margin-top: 19px;
+    height: 0;
+    padding-bottom: 372px;
+    position: relative;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .section-leftSide {
-    max-width: 70%;
     margin-right: 31px;
-    min-height: 100%;
 }
 
 .section-rightSide {
-    max-width: 30%;
+    max-width: 242px;
+    max-height: 439px;
     min-width: min-content;
 }
 
@@ -325,6 +332,15 @@ header {
     white-space: nowrap;
 }
 
+.section-rightSide-text-container {
+    display: inline-block;
+    border: 1px solid #ECECEC;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: calc(min-content + 28px);
+    width: 242px;
+}
+
 .section-rightSide-text-container p {
     padding: 9px 15px 9px;
     background: #FDF1EB;
@@ -339,16 +355,9 @@ header {
     color: #4E4E4E;
 }
 
-.section-rightSide-text-container {
-    border: 1px solid #ECECEC;
-    box-sizing: border-box;
-    border-radius: 3px;
-}
-
 .section-rightSide-text-container > span {
     display: block;
     position: relative;
-    height: 100%;
     margin: 15px;
     font-family: 'Quicksand';
     font-style: normal;
@@ -357,6 +366,7 @@ header {
     line-height: 14px;
     letter-spacing: 0.02em;
     color: #5C5C5C;
+    height: 100%;
 }
 
 .section-rightSide-text-container > span span {
@@ -409,7 +419,6 @@ header {
     border-radius: 3px;
     height: fit-content;
     padding-bottom: 15px;
-    min-width: fit-content;
 }
 
 .section-discussion {
@@ -691,7 +700,7 @@ header {
 
 /* CRIAR TOPICO!!! */
 
-h4 {
+.section-criarTopico-form h4 {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 400;
@@ -759,6 +768,8 @@ h4 {
 
 /* ----------- */
 
+/* FORMULARIO DE NOVO TOPICO!! */
+
 #criarTopicoAssunto, #criarTopicoConteudo  {
     display: block;
     padding: 0;
@@ -794,7 +805,7 @@ h4 {
     line-height: 16px;
     text-align: center;
     color: #FFFFFF;
-    margin: 7px 67.85px 8.5px 66.31px;
+    padding: 7px 67.85px 8.5px 66.31px;
     background-color: transparent; 
     border: none;
 }
@@ -802,4 +813,117 @@ h4 {
 footer {
     margin-left: 14px;
     margin-right: 48px;
+}
+
+/* ------- */
+
+.section-discussion-topicoCriado {
+    position: relative;
+    margin-left: 17px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.section-discussion-topicoCriado h4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #ED7839;
+}
+
+.section-discussion-topicoCriado > span {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #595959;
+    margin-top: 18px;
+}
+
+.section-discussion-topicoCriado > a {
+    display: block;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 137.5%;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #F48F44;
+    margin-top: 29px;
+}
+
+.section-discussion-topicoCriado-botao {
+    text-align: center;
+    margin-top: 47px;
+}
+
+.section-discussion-topicoCriado hr {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.section-discussion-topicoCriado button {
+    background: linear-gradient(180deg, #FEB254 0%, #F0813D 100%);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    border: 0;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 7px 55.61px 9px 56.53px;
+}
+
+.section-discussion-topicoCriado-feedback {
+    position: relative;
+    width: 100%;
+    margin-top: 14px;
+    background: #DDDDDD;
+    border: 1px solid #E7E7E7;
+    box-sizing: border-box;
+    border-radius: 4px;
+    backdrop-filter: blur(50%);
+    text-align: center;
+}
+
+.section-discussion-topicoCriado-feedback img {
+    margin-top: 35px;
+    margin-bottom: 7.78px;
+}
+
+.section-discussion-topicoCriado-feedback p {
+    margin-bottom: 8px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #707070;
+}
+
+.section-discussion-topicoCriado-feedback div {
+    position: relative;
+    margin-bottom: 35px;
+    
+}
+
+.section-discussion-topicoCriado-feedback a {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #ED7839;
 }
