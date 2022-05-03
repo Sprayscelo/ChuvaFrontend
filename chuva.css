@@ -260,7 +260,7 @@ header {
     margin: 1em auto;
     width: 100%;
     height: 0;
-    padding-bottom: 372px;
+    padding-bottom: 439px;
     position: relative;
 }
 
@@ -271,12 +271,12 @@ header {
 }
 
 .section-leftSide {
+    width: 70%;
     margin-right: 31px;
 }
 
 .section-rightSide {
     max-width: 242px;
-    max-height: 439px;
     min-width: min-content;
 }
 
@@ -338,7 +338,6 @@ header {
     box-sizing: border-box;
     border-radius: 3px;
     height: calc(min-content + 28px);
-    width: 242px;
 }
 
 .section-rightSide-text-container p {
