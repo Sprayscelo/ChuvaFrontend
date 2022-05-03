@@ -572,7 +572,7 @@ header {
     margin-bottom: 3px;
 }
 
-.section-discussion-comments p, .section-discussion-answers p {
+.section-discussion-comments p, .section-discussion-answers p, #autor {
     font-family: 'Quicksand';
     font-style: normal;
     font-weight: 700;
@@ -660,12 +660,20 @@ header {
 
 .section-discussion-answers > div > div {
     display: grid;
-    grid-template-columns: minmax(max-content, 538.6px) minmax(max-content, 390.8px) minmax(max-content,40.23px);
+    grid-template-columns: 1fr 1fr;
     gap: 5px;
     background-color: #F8F8F8;
     text-align: right;
     align-items: center;
     height: min-content;
+}
+
+.section-discussion-answers-autor-container > * {
+    display: inline-block;
+}
+
+.section-discussion-answers-autor-container p {
+    margin-right: 33.07px;
 }
 
 .section-discussion-answers-subcontainer > div > div p {
