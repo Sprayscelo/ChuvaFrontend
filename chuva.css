@@ -79,6 +79,7 @@ body,html {
     height: fit-content;
     border-bottom: 2px solid rgba(114, 92, 92, 0.1);
     color: #725C5C;
+    cursor: pointer;
 }
 
 main {
