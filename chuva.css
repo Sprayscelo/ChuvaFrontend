@@ -337,7 +337,7 @@ header {
     border: 1px solid #ECECEC;
     box-sizing: border-box;
     border-radius: 3px;
-    height: calc(min-content + 28px);
+    height: 439px;
 }
 
 .section-rightSide-text-container p {

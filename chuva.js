@@ -30,3 +30,12 @@ function sendTopic() {
     enviarTopico.style.display = 'None'
     topicoEnviado.style.display = 'block'
 }
+
+function showAnswers() {
+    if(document.querySelector(".section-discussion-answers-mainContainer").style.display == 'none') {
+        document.querySelector(".section-discussion-answers-mainContainer").style.display = 'block'
+    }
+    else {
+        document.querySelector(".section-discussion-answers-mainContainer").style.display = 'none'
+    }
+}
